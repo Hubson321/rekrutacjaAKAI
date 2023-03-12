@@ -1,0 +1,94 @@
+<!--
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - HTML
+
+	W tym pliku znajduje się struktura strony z formularzem. Twoim zadaniem jest upiększenie
+	tego formularza. Przeanalizuj poniższy kod. Jego znajomość będzie potrzebna do przerobienia
+	pliku form.css odpowiedzialnego za styl strony. Gdy zapoznasz się ze strukturą strony,
+	przejdź do pliku css/form.css lub js/validation.js po dalsze instrukcje.
+
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AKAI Frontend Task</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+
+	<div id="thank_you" class="popup" style="display: none">
+			<p>Dziękujemy za wypełnienie formularza</p>
+			<button id="closeButton" type="submit" onClick="window.location.reload()">Zamknij</button>
+	</div>
+
+	<!-- element section ma ID "task-frontend". Może to się nam przydać m.in. podczas stylowania dokumentu -->
+	<section id="main-section">
+		<section id="task-frontend" class="task-frontend">
+
+			<!-- element span otrzymuje klasę "basic-title". Klasa ta może być wykorzystywana w wielu różnych elementach -->
+			<div class="header">
+				<!--<img class="logo" src="img/akai_logo_white.png">-->
+				<div class="basic-title">Formularz rekrutacyjny</div>
+
+			</div>
+
+			<form name="dataForm" id="form" method="POST">
+
+				<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
+				<div class="form-fields">  
+					<input type="text" name="firstName" id="firstName" placeholder="Imię" />
+					<div class="error"></div>
+					<input type="text" name="lastName" id="lastName" placeholder="Nazwisko" />
+					<div class="error"></div>
+					<input novalidate="novalidate"  type="email" name="email" id="email" placeholder="Adres e-mail" />
+					<div class="error"></div>
+				</div>
+
+				<span class="small">Sekcje, które Cię interesują:</span>
+				<div class="row">
+					<div class="column">
+						<div class="row-cell">
+							<input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
+							<label class="small" for="frontend-checkbox">Frontend</label>
+						</div>
+						<div class="row-cell">	
+							<input type="checkbox" id="mobile-checkbox" name="section" value="frontend">
+							<label class="small" for="mobile-checkbox">Mobile</label>
+						</div>
+					</div>
+					<div class="column">
+			
+						<div class="row-cell">	
+							<input type="checkbox" id="graphics-checkbox" name="section" value="frontend">
+							<label class="small" for="graphics-checkbox">Grafika</label>
+						</div>
+						<div class="row-cell">
+							<input type="checkbox" id="backend-checkbox" name="section" value="frontend">
+							<label class="small" for="backend-checkbox">Backend</label>
+						</div>	
+					</div>	
+				</div>
+				<div class="error"></div>	
+
+							<input type="submit" value="Prześlij">
+			</form>
+
+		</section>
+		<section id="right-panel">
+			<img src="img/akai_logo.png">
+		</section>
+</section>
+
+
+
+<!-- zaimportowanie pliku z kodem javascript, który dokona walidacji danych (zadanie JS) -->
+<script type="text/javascript" src="js/validation.js"></script>
+
+</body>
+<script src="js/app.js"></script>
+</html>

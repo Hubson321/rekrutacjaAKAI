@@ -1,2 +1,3 @@
-# rekrutacjaAKAI
-Rozwiązanie zadań na rekrutacje AKAI
+# Rekrutacja lato 2023
+
+W poszczególnych folderach znajdują się rozwiązania zadań z danego zagadnienia

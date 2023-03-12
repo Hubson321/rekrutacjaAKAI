@@ -1,0 +1,173 @@
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - CSS
+
+    Spróbuj zmodyfikować poniższy plik ze stylami tak, by upiększyć formularz na stronie.
+    Jako inspiracji możesz skorzystać z szablonu znajdującego się w pliku img/layout.png
+    Nie wymagamy, by wykonać identyczny layout. Liczy się kreatywność.
+
+    Przy wykonywaniu zadania można zmienić strukturę pliku index.html.
+    Pamiętaj, że w takim wypadku będzie trzeba zadbać o dostosowanie odpowiednich selektorów.
+
+    Jeśli korzystasz z preprocessorów takich jak Sass/Less, również możesz się tym pochwalić.
+
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #001a35;
+  align-items: center;
+  overflow: hidden;
+}
+
+#main-section{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  width: 800px;
+  align-items: center;
+}
+#task-frontend {
+	width: 50%;
+	text-align: center;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  
+}
+
+#task-frontend .small{
+  font-size: 18px;
+}
+
+#task-frontend .header{
+  padding: 16px 0;
+}
+#task-frontend .error {
+  font-size: 14.5px;
+  margin-bottom: 5px;
+  margin-top: -5px;
+  color:red;
+}
+
+#task-frontend .success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+
+#task-frontend .failure-icon,
+.error {
+  color: red;
+}
+
+#task-frontend .form-fields{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+#task-frontend .row{
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  justify-content: center;
+}
+#task-frontend .row-cell{
+  min-width: fit-content;
+  padding:0 8px;
+}
+
+#task-frontend .column{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#task-frontend form>label {
+  text-transform: uppercase;
+	margin: 10px auto 0 auto;
+}
+
+#task-frontend form{
+  padding: 8px 8px 16px 8px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+#task-frontend .logo{
+  width: 120px;
+  height: 120px;
+}
+#task-frontend input[type="text"], #task-frontend input[type="email"] {
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 250px;
+  height: 30px;
+  padding-left: 16px;
+}
+
+#task-frontend input[type="checkbox"] {
+	border: 1px solid red;
+	text-transform: none;
+}
+
+#task-frontend input[type="submit"] {
+	margin-top: 10px;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+  background-color: #fca218;
+  border-radius: 8px;
+  border: 1px solid #fca218;
+  color: #001a35;
+}
+#task-frontend input[type="submit"]:hover{
+  background-color: #e29115;
+  cursor: pointer;
+}
+
+#right-panel{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2eff5;
+  height: 65vh;
+  border-radius: 0 8px 8px 0;
+}
+
+.popup {
+  background-color: #e2eff5;
+  border: 1px solid #001a35;
+  border-radius: 8px;
+  position: sticky;
+  top: 50%;
+  width: fit-content;
+  left: 25%;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+.popup>button{
+  width: fit-content;
+  background-color: #fca218;
+  border-radius: 8px;
+  border: 1px solid #fca218;
+  color: #001a35;
+}
+
+.popup>button:hover{
+  background-color: #e29115;
+  cursor: pointer;
+}
